@@ -2,9 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="FlexPisante — Os melhores tênis no estilo certo, entrega rápida e preço justo!">
-  <title>FlexPisante 👟</title>
+  <title>FlexPisante - Loja de Tênis</title>
   <style>
     body {
       margin: 0;
@@ -18,135 +16,76 @@
       padding: 20px;
       text-align: center;
     }
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #222;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 15px 20px;
-      display: inline-block;
-    }
-    nav a:hover {
-      background-color: #ff3c00;
-    }
-    .banner {
-      text-align: center;
-      background-color: #000;
-      color: #fff;
-      padding: 50px 20px;
-    }
-    .destaques, .sobre, .contato {
-      padding: 30px 20px;
-      text-align: center;
-    }
-    .grid {
+    .catalogo {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-      padding: 20px;
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
     }
     .produto {
-      background-color: #fff;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .produto:hover {
+      transform: scale(1.03);
     }
     .produto img {
-      max-width: 100%;
-      border-radius: 5px;
+      width: 100%;
+      height: auto;
     }
-    .produto h3 {
-      margin: 10px 0 5px;
+    .produto h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 22px;
+      margin: 15px 0 10px;
+    }
+    .produto p {
+      font-size: 18px;
+      margin: 0 0 15px;
     }
     .produto a {
       display: inline-block;
-      background-color: #ff3c00;
+      margin-bottom: 20px;
+      background-color: #FF0000;
       color: #fff;
-      padding: 10px 15px;
-      margin-top: 10px;
-      border-radius: 5px;
+      padding: 10px 20px;
       text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.2s;
     }
     .produto a:hover {
-      background-color: #e03100;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #000;
-      color: #fff;
-      margin-top: 30px;
+      background-color: #cc0000;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>FlexPisante</h1>
+    <p>Os tênis mais estilosos em um só lugar</p>
+  </header>
 
-<header>
-  <h1>FlexPisante 👟</h1>
-</header>
-
-<nav>
-  <a href="#destaques">Destaques</a>
-  <a href="#sobre">Sobre</a>
-  <a href="#contato">Contato</a>
-</nav>
-
-<div class="banner">
-  <h2>🔥 Novos modelos disponíveis! Corre que é por tempo limitado! 🔥</h2>
-</div>
-
-<section id="destaques" class="destaques">
- <div class="produto">
-  <img src="imagens/imagens/flexpisante-Photoroom.png" alt="Tênis KNU Skool" style="width:100%; border-radius: 10px;">
-  <h2 style="font-family: 'Montserrat', sans-serif;">KNU Skool</h2>
-  <p style="font-family: 'Roboto', sans-serif;">R$ 119,98</p>
-  <a href="https://wa.me/5515996280456?text=Quero%20comprar%20o%20KNU%20Skool!" target="_blank" 
-     style="background-color: #FF0000; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 8px;">
-    Comprar no WhatsApp
-  </a>
-</div>
-
-  <div class="produto">
-  <img src="imagens/imagens/100-Photoroom.png" alt="Tênis Sneaker Coli" style="width:100%; border-radius: 10px;">
-  <h2 style="font-family: 'Montserrat', sans-serif;">Sneaker Coli</h2>
-  <p style="font-family: 'Roboto', sans-serif;">R$ 119,98</p>
-  <a href="https://wa.me/5515996280456?text=Quero%20comprar%20o%20Sneaker%20Coli!" target="_blank" 
-     style="background-color: #FF0000; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 8px;">
-    Comprar no WhatsApp
-  </a>
-</div>
-
-  <h2>Destaques</h2>
-  <div class="grid">
+  <div class="catalogo">
+    <!-- Produto 1 -->
     <div class="produto">
-      <img src="https://via.placeholder.com/300x300?text=T%C3%AAnis+1" alt="Tênis 1">
-      <h3>Tênis Street Pro</h3>
-      <a href="https://wa.me/5515996280456?text=Quero%20o%20T%C3%AAnis%20Street%20Pro!" target="_blank">Comprar no WhatsApp</a>
+      <img src="imagens/knu-skool.jpg" alt="Tênis KNU Skool">
+      <h2>KNU Skool</h2>
+      <p>R$ 119,98</p>
+      <a href="https://wa.me/5515996280456?text=Quero%20comprar%20o%20KNU%20Skool!" target="_blank">Comprar no WhatsApp</a>
     </div>
+
+    <!-- Produto 2 -->
     <div class="produto">
-      <img src="https://via.placeholder.com/300x300?text=T%C3%AAnis+2" alt="Tênis 2">
-      <h3>Tênis Casual Flex</h3>
-      <a href="https://wa.me/5515996280456?text=Quero%20o%20T%C3%AAnis%20Casual%20Flex!" target="_blank">Comprar no WhatsApp</a>
+      <img src="https://via.placeholder.com/300x200?text=Imagem+em+breve" alt="Tênis Sneaker Coli">
+      <h2>Sneaker Coli</h2>
+      <p>R$ 119,98</p>
+      <a href="https://wa.me/5515996280456?text=Quero%20comprar%20o%20Sneaker%20Coli!" target="_blank">Comprar no WhatsApp</a>
     </div>
   </div>
-</section>
-
-<section id="sobre" class="sobre">
-  <h2>Sobre Nós</h2>
-  <p>FlexPisante nasceu pra levar estilo, conforto e preço justo pros seus pés! Escolhemos a dedo os melhores modelos e entregamos em todo o Brasil.</p>
-</section>
-
-<section id="contato" class="contato">
-  <h2>Fale Conosco</h2>
-  <p>📲 WhatsApp: <a href="https://wa.me/5515996280456" target="_blank">15996280456</a></p>
-</section>
-
-<footer>
-  <p>&copy; 2025 FlexPisante — Todos os direitos reservados.</p>
-</footer>
-
 </body>
 </html>
+
