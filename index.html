@@ -78,6 +78,10 @@
       overflow: hidden;
       text-align: center;
       transition: transform 0.2s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
     }
     .produto:hover { transform: scale(1.03); }
     .produto img {
@@ -92,16 +96,19 @@
       margin: 15px 0 10px;
     }
     .produto p { font-size: 18px; margin: 0 0 15px; }
-    .produto a {
+    .produto-footer {
+      padding: 10px 0 20px;
+      margin-top: auto;
+    }
+    .produto-footer a {
       display: inline-block;
-      margin-bottom: 20px;
       background-color: #FF0000;
       color: #fff;
       padding: 10px 20px;
       border-radius: 8px;
       transition: background 0.2s;
     }
-    .produto a:hover { background-color: #cc0000; }
+    .produto-footer a:hover { background-color: #cc0000; }
 
     /* ======= Rodapé ======= */
     footer {
@@ -162,7 +169,9 @@
       <img src="imagens/imagens/flexpisante-Photoroom.png" alt="Tênis KNU Skool">
       <h2>KNU Skool</h2>
       <p>R$ 119,98</p>
-      <a href="https://wa.me/5515996280456?text=Quero%20comprar%20o%20KNU%20Skool!" target="_blank">Comprar no WhatsApp</a>
+      <div class="produto-footer">
+        <a href="https://wa.me/5515996280456?text=Quero%20comprar%20o%20KNU%20Skool!" target="_blank">Comprar no WhatsApp</a>
+      </div>
     </div>
 
     <!-- Produto 2 -->
@@ -170,7 +179,9 @@
       <img src="imagens/100-Photoroom.png" alt="Tênis Sneaker Coli">
       <h2>Sneaker Coli</h2>
       <p>R$ 119,98</p>
-      <a href="https://wa.me/5515996280456?text=Quero%20comprar%20o%20Sneaker%20Coli!" target="_blank">Comprar no WhatsApp</a>
+      <div class="produto-footer">
+        <a href="https://wa.me/5515996280456?text=Quero%20comprar%20o%20Sneaker%20Coli!" target="_blank">Comprar no WhatsApp</a>
+      </div>
     </div>
 
     <!-- Produto 3 -->
@@ -178,7 +189,9 @@
       <img src="imagens/imagens/terceiroTenis-Photoroom.png" alt="Tênis Nyc Shoes">
       <h2>Nyc Shoes</h2>
       <p>R$ 150</p>
-      <a href="https://wa.me/5515996280456?text=Quero%20comprar%20o%20Nyc%20Shoes!" target="_blank">Comprar no WhatsApp</a>
+      <div class="produto-footer">
+        <a href="https://wa.me/5515996280456?text=Quero%20comprar%20o%20Nyc%20Shoes!" target="_blank">Comprar no WhatsApp</a>
+      </div>
     </div>
 
     <!-- Produto 4 (Moretto Flipstreeat) -->
@@ -186,16 +199,20 @@
       <img src="imagens/imagens/moretto-Photoroom.png" alt="Tênis Moretto Flipstreeat">
       <h2>Moretto Flipstreeat</h2>
       <p>R$ 150</p>
-      <a href="https://wa.me/5515996280456?text=Quero%20comprar%20o%20Moretto%20Flipstreeat!" target="_blank">Comprar no WhatsApp</a>
+      <div class="produto-footer">
+        <a href="https://wa.me/5515996280456?text=Quero%20comprar%20o%20Moretto%20Flipstreeat!" target="_blank">Comprar no WhatsApp</a>
+      </div>
     </div>
 
-    <!-- Produto 5 -->
-<div class="produto">
-  <img src="imagens/imagens/D_NQ_NP_954679-MLB82763384412_032025-O-kit-tnis-masculino-casual-relogio-fone-touch-bluetooth-Photoroom.png" alt="Tênis Esportivo + Brindes">
-  <h2>Kit Premium FlexPisante</h2>
-  <p>R$ 165,98</p>
-  <a href="https://wa.me/5515996280456?text=Desejo%20tênis%20esportivo%20%2B%20brindes!!!" target="_blank">Comprar no WhatsApp</a>
-</div>
+    <!-- Produto 5 (Kit Premium) -->
+    <div class="produto">
+      <img src="imagens/imagens/D_NQ_NP_954679-MLB82763384412_032025-O-kit-tnis-masculino-casual-relogio-fone-touch-bluetooth-Photoroom.png" alt="Tênis Esportivo + Brindes">
+      <h2>Kit Premium FlexPisante</h2>
+      <p>R$ 165,98</p>
+      <div class="produto-footer">
+        <a href="https://wa.me/5515996280456?text=Desejo%20t%C3%AAnis%20esportivo%20%2B%20brindes!!!" target="_blank">Comprar no WhatsApp</a>
+      </div>
+    </div>
 
   </div> <!-- Fecha catálogo -->
 
