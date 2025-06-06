@@ -2,31 +2,73 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FlexPisante - Loja de Tênis</title>
   <style>
+    /* ======= Estilos Gerais ======= */
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
       background-color: #f5f5f5;
       color: #333;
     }
+    a {
+      text-decoration: none;
+    }
+
+    /* ======= Faixa Frete Grátis ======= */
+    .frete-gratis {
+      background-color: #ff0000;
+      color: #fff;
+      font-weight: 700;
+      overflow: hidden;
+      text-align: center;
+      padding: 10px 0;
+      position: relative;
+    }
+    .frete-gratis .slide {
+      display: inline-block;
+      white-space: nowrap;
+      animation: deslizar 10s linear infinite;
+    }
+    .frete-gratis .icon {
+      display: inline-block;
+      margin-right: 8px;
+      animation: rodarRodas 2s linear infinite;
+    }
+    @keyframes deslizar {
+      0%   { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    /* animação simples simulando rodas girando */
+    @keyframes rodarRodas {
+      from { transform: translateY(0); }
+      50%  { transform: translateY(-2px); }
+      to   { transform: translateY(0); }
+    }
+
+    /* ======= Cabeçalho ======= */
     header {
       background-color: #000;
       color: #fff;
       padding: 20px;
       text-align: center;
     }
+
+    /* ======= Banner ======= */
     .banner img {
       width: 100%;
       max-height: 400px;
       object-fit: cover;
       display: block;
     }
+
+    /* ======= Catálogo ======= */
     .catalogo {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-      padding: 30px;
+      padding: 30px 20px;
       max-width: 1200px;
       margin: auto;
     }
@@ -38,41 +80,31 @@
       text-align: center;
       transition: transform 0.2s;
     }
-    .produto:hover {
-      transform: scale(1.03);
-    }
-    .produto img {
-      width: 100%;
-      height: auto;
-    }
+    .produto:hover { transform: scale(1.03); }
+    .produto img { width: 100%; height: auto; }
     .produto h2 {
       font-family: 'Montserrat', sans-serif;
       font-size: 22px;
       margin: 15px 0 10px;
     }
-    .produto p {
-      font-size: 18px;
-      margin: 0 0 15px;
-    }
+    .produto p { font-size: 18px; margin: 0 0 15px; }
     .produto a {
       display: inline-block;
       margin-bottom: 20px;
       background-color: #FF0000;
       color: #fff;
       padding: 10px 20px;
-      text-decoration: none;
       border-radius: 8px;
       transition: background 0.2s;
     }
-    .produto a:hover {
-      background-color: #cc0000;
-    }
+    .produto a:hover { background-color: #cc0000; }
+
+    /* ======= Rodapé ======= */
     footer {
       background-color: #000;
       color: #fff;
-      padding: 30px 20px;
+      padding: 40px 20px;
       text-align: center;
-      margin-top: 40px;
     }
     .footer-content {
       max-width: 1200px;
@@ -82,20 +114,26 @@
       align-items: center;
       gap: 20px;
     }
-    .footer-content a {
-      color: #ff0000;
-      text-decoration: none;
-    }
-    .footer-content a:hover {
-      text-decoration: underline;
-    }
-    .certificado img {
-      width: 120px;
-      height: auto;
+    .footer-content a { color: #ff0000; }
+    .footer-content a:hover { text-decoration: underline; }
+    .certificado img { width: 120px; height: auto; }
+
+    /* ======= Responsividade ======= */
+    @media (max-width: 768px) {
+      header h1 { font-size: 26px; }
+      .catalogo { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 15px; padding: 25px 10px; }
+      .produto h2 { font-size: 18px; }
+      .produto p { font-size: 16px; }
+      .frete-gratis { font-size: 14px; padding: 8px 0; }
     }
   </style>
 </head>
 <body>
+  <!-- Faixa de Frete Grátis -->
+  <div class="frete-gratis">
+    <span class="slide"><span class="icon">🚚</span>FRETE GRÁTIS PARA TODO O BRASIL&nbsp;&nbsp;&nbsp;</span>
+  </div>
+
   <header>
     <h1>FlexPisante</h1>
     <p>Os tênis mais estilosos em um só lugar</p>
