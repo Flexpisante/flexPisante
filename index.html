@@ -40,7 +40,6 @@
       0%   { transform: translateX(100%); }
       100% { transform: translateX(-100%); }
     }
-    /* animação simples simulando rodas girando */
     @keyframes rodarRodas {
       from { transform: translateY(0); }
       50%  { transform: translateY(-2px); }
@@ -81,7 +80,12 @@
       transition: transform 0.2s;
     }
     .produto:hover { transform: scale(1.03); }
-    .produto img { width: 100%; height: auto; }
+    .produto img {
+      max-width: 85%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
     .produto h2 {
       font-family: 'Montserrat', sans-serif;
       font-size: 22px;
@@ -121,7 +125,11 @@
     /* ======= Responsividade ======= */
     @media (max-width: 768px) {
       header h1 { font-size: 26px; }
-      .catalogo { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 15px; padding: 25px 10px; }
+      .catalogo {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 15px;
+        padding: 25px 10px;
+      }
       .produto h2 { font-size: 18px; }
       .produto p { font-size: 16px; }
       .frete-gratis { font-size: 14px; padding: 8px 0; }
@@ -129,11 +137,13 @@
   </style>
 </head>
 <body>
+
   <!-- Faixa de Frete Grátis -->
   <div class="frete-gratis">
     <span class="slide"><span class="icon">🚚</span>FRETE GRÁTIS PARA TODO O BRASIL&nbsp;&nbsp;&nbsp;</span>
   </div>
 
+  <!-- Cabeçalho -->
   <header>
     <h1>FlexPisante</h1>
     <p>Os tênis mais estilosos em um só lugar</p>
@@ -146,6 +156,7 @@
 
   <!-- Catálogo de Produtos -->
   <div class="catalogo">
+
     <!-- Produto 1 -->
     <div class="produto">
       <img src="imagens/imagens/flexpisante-Photoroom.png" alt="Tênis KNU Skool">
@@ -161,36 +172,38 @@
       <p>R$ 119,98</p>
       <a href="https://wa.me/5515996280456?text=Quero%20comprar%20o%20Sneaker%20Coli!" target="_blank">Comprar no WhatsApp</a>
     </div>
-  </div>
 
-  <!-- Produto 3 -->
-<div class="produto">
-  <img src="imagens/imagens/terceiroTenis-Photoroom.png" alt="Tênis Produto 3">
-  <h2>Nyc Shoes</h2>
-  <p>R$ 150</p> <!-- coloque o preço real -->
-  <a href="https://wa.me/5515996280456?text=Quero%20comprar%20o%20Produto%203!" target="_blank">Comprar no WhatsApp</a>
-</div>  
-  
-<!-- Produto Moretto Flipstreeat -->
-<div class="produto">
-  <img src="imagens/imagens/moretto-Photoroom.png" alt="Tênis Moretto Flipstreeat">
-  <h2>Moretto Flipstreeat</h2>
-  <p>R$ 150</p>
-  <a href="https://wa.me/5515996280456?text=Quero%20comprar%20o%20Moretto%20Flipstreeat!" target="_blank">Comprar no WhatsApp</a>
-</div>
-
-
-<!-- Rodapé -->
-<footer>
-  <div class="footer-content" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: #f5f5f5; border-top: 1px solid #ddd;">
-    <div class="contato" style="font-family: Arial, sans-serif; font-size: 14px; color: #333;">
-      <p>📞 WhatsApp: <a href="https://wa.me/5515996280456" target="_blank" style="color: #25D366; text-decoration: none;">+55 15 99628-0456</a></p>
-      <p>📸 <a href="https://www.instagram.com/flex.pisante?igsh=OTNrM2w3aTZhZW13" target="_blank" style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; text-decoration: none;">Insta: flexpisante</a></p>
+    <!-- Produto 3 -->
+    <div class="produto">
+      <img src="imagens/imagens/terceiroTenis-Photoroom.png" alt="Tênis Nyc Shoes">
+      <h2>Nyc Shoes</h2>
+      <p>R$ 150</p>
+      <a href="https://wa.me/5515996280456?text=Quero%20comprar%20o%20Nyc%20Shoes!" target="_blank">Comprar no WhatsApp</a>
     </div>
-    <div class="certificado">
-      <img src="imagens/imagens/certificadoSegurança.png" alt="Certificado de segurança FlexPisante" style="max-width: 150px; height: auto;">
+
+    <!-- Produto 4 (Moretto Flipstreeat) -->
+    <div class="produto">
+      <img src="imagens/imagens/moretto-Photoroom.png" alt="Tênis Moretto Flipstreeat">
+      <h2>Moretto Flipstreeat</h2>
+      <p>R$ 150</p>
+      <a href="https://wa.me/5515996280456?text=Quero%20comprar%20o%20Moretto%20Flipstreeat!" target="_blank">Comprar no WhatsApp</a>
     </div>
-  </div>
-</footer>
+
+  </div> <!-- Fecha catálogo -->
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="footer-content" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: #f5f5f5; border-top: 1px solid #ddd;">
+      <div class="contato" style="font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+        <p>📞 WhatsApp: <a href="https://wa.me/5515996280456" target="_blank" style="color: #25D366; text-decoration: none;">+55 15 99628-0456</a></p>
+        <p>📸 <a href="https://www.instagram.com/flex.pisante?igsh=OTNrM2w3aTZhZW13" target="_blank" style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; text-decoration: none;">Insta: flexpisante</a></p>
+      </div>
+      <div class="certificado">
+        <img src="imagens/imagens/certificadoSegurança.png" alt="Certificado de segurança FlexPisante" style="max-width: 150px; height: auto;">
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
+
